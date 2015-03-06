@@ -1,6 +1,5 @@
 # Diego, March 2015
 
-
 read.household <- function(
   dataFile = "household_power_consumption.txt"){
   require(lubridate)
