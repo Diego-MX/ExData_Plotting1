@@ -13,8 +13,7 @@ household <- read.household()
 # Create the plot.
 setwd("../figure")
 png("plot4.png", width=480, height=480, units="px")
-with(household, {
-    par(mfrow=c(2,2))
+with(household, {par(mfrow=c(2,2))
 
     # First Corner
     plot(Time, Global_active_power, type="l", col="black",
