@@ -12,10 +12,10 @@ read.household <- function(
       if(!file.exists("Household.zip")){
         url <- paste0("https://d396qusza40orc.cloudfront.net/",
             "exdata%2Fdata%2Fhousehold_power_consumption.zip")
-        download.file(url, "Household.zip")}
-        
-      unzip("Household.zip")}
-     
+        download.file(url, "Household.zip")
+      }
+      unzip("Household.zip")
+    }
     dataHead <- read.table(dataFile, header=T, sep=";", nrows=5)
     dataClasses <- rep("NULL", length(dataHead))
     dateInd <- names(dataHead) == "Date"
@@ -39,10 +39,11 @@ read.household <- function(
         filter(Date %in% twodays) %>%
         mutate(Time=as.POSIXct(paste(Date, Time)))
      
-    save(household, file="Household.RData")}
-
+    save(household, file="Household.RData")
+  }
   load("Household.RData")
-  return(household)})
+  return(household)
+})
 
 
 
