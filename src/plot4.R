@@ -5,8 +5,8 @@
 # setwd("~/Sync/Dropbox/R/Coursera/4 Data Analysis/Project 1 (repository)/src/")
 
 
-if(file.exists("Read Household.R"))
-source("Read Household.R")
+if(file.exists("Read Household.R")){
+    source("Read Household.R")}
 household <- read.household()
 
 
